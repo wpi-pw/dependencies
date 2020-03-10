@@ -43,12 +43,12 @@ add_action( 'wp_enqueue_scripts', 'remove_default_stylesheet', 20 );
  *
  * @since 2.4.0
  */
-function remove_default_default_icons() {
+function remove_default_elementor_icons() {
     foreach( [ 'solid', 'regular', 'brands' ] as $style ) {
         wp_deregister_style( 'elementor-icons-fa-' . $style );
     }
 }
-add_action( 'elementor/frontend/after_register_styles', 'remove_default_default_icons', 20 );
+add_action( 'elementor/frontend/after_register_styles', 'remove_default_elementor_icons', 20 );
 
 /**
  * Deregister Theme Scripts & Styles.
