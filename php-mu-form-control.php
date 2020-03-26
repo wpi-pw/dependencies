@@ -6,6 +6,10 @@ Author: Dima Minka, CDK, WPI
 Version: 1.0
 Author URI: https://dima.mk
 */
+
+/**
+ * Check field check_message and send error if !empty
+ */
 add_action( 'elementor_pro/forms/validation', function ( $record, $ajax_handler ) {
 
 	$fields = $record->get_field( [
@@ -23,6 +27,9 @@ add_action( 'elementor_pro/forms/validation', function ( $record, $ajax_handler 
 	}
 }, 10, 2 );
 
+/**
+ * Hide check_message field
+ */
 add_action( 'wp_print_scripts', function () {
 	?>
     <style>
