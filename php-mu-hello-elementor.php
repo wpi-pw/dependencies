@@ -8,5 +8,5 @@ Author URI: https://dima.mk
 */
 
 // Unload default theme styles
-add_filter( 'hello_elementor_enqueue_style', false, 1 );
-add_filter( 'hello_elementor_enqueue_theme_style', false, 1 );
+add_filter( 'hello_elementor_enqueue_style', '__return_false', 1 );
+add_filter( 'hello_elementor_enqueue_theme_style', '__return_false', 1 );
